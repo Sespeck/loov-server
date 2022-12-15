@@ -10,6 +10,7 @@ const db = process.env.DB;
 // import router files
 const router = require('./routes/router');
 // middleware
+app.use(express.static('public'));
 app.use(express.json({ limit: '50mb' }));
 app.use(router);
 
